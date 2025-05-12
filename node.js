@@ -7,6 +7,7 @@ http
 				response.statusCode = 200;
 				response.setHeader('Content-Type', 'text/html');
 				fs.readFile('index.html', (err, data)=>{
+						console.log(request.socket.remoteAddress);
 						response.end(data);
 				});
 
